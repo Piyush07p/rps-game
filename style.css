@@ -1,0 +1,214 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow-x: hidden;
+}
+.head{
+    height: 100px;
+     border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aquamarine;
+
+}
+
+.player p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+   
+}
+.computer p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+   
+
+}
+/* ------------------main-content--------------- */
+
+.main{
+    background-color:#A7F5B9 ;
+    height: 90vh;
+}
+
+
+/* ------------------display----------------- */
+
+ .display{
+     height: 50vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-around;
+    
+    }
+.display h1{
+   letter-spacing: 1px;
+}
+.display button{
+ 
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(186, 123, 245);
+    color: white;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+              
+
+}
+.btn{
+    cursor: pointer;
+}
+
+
+
+/* --------------------hands---------------------- */
+
+.match{
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100vw;
+    margin-top: 100px;
+    visibility: hidden;
+    
+}
+.hands{
+  
+     display: flex;
+     justify-content: space-around;
+    
+
+}
+.hands img{
+    width: 200px;
+}
+.winner{
+    margin-bottom: 50px;
+    font-size: 40px;
+    letter-spacing: 1px;
+
+}
+.playerhand{
+    width: 200px;
+}
+.computerhand{
+    transform: rotateY(180deg);
+    width: 200px;
+}
+.match h2{
+    text-align: center;
+}
+
+/* ---------------------option-part--------------- */
+.option{
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content:space-around;
+
+
+}
+.option button{
+    margin: 20px;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+/* -----------------------css-animation---------------------------- */
+
+@keyframes phands{
+0%{
+    transform: translateY(0px);
+
+
+   }
+15%{
+transform: translateY(-50px);
+}
+30%{
+transform: translateY(0px);
+  }
+40%{
+transform: translateY(-50px);
+}
+60%{
+transform: translateY(0px);
+}
+75%{
+transform: translateY(-50px);
+}
+85%{
+transform: translateY(0px);  
+}
+100%{
+transform: translateY(-50px);
+}
+
+
+}
+
+/* --------------comp-hand anmimation------------- */
+
+ @keyframes  chands{
+0%{
+    transform: rotateY(180deg) translateY(0px);
+
+
+   }
+15%{
+transform:rotateY(180deg)  translateY(-50px);
+}
+30%{
+transform:rotateY(180deg) translateY(0px);
+  }
+40%{
+transform: rotateY(180deg) translateY(-50px);
+}
+60%{
+transform:rotateY(180deg) translateY(0px);
+}
+75%{
+transform:rotateY(180deg) translateY(-50px);
+}
+85%{
+transform: rotateY(180deg) translateY(0px);  
+}
+100%{
+transform:rotateY(180deg)  translateY(-50px);
+}
+
+
+}
+.label{
+   font-size: 24px;
+   letter-spacing: 2px;
+}
+.inp{
+   width: 250px;
+   height: 26px;
+   border: 1px solid black;
+border-radius: 20px;
+padding-left: 10px;
+box-shadow: 1px 3px 10px 1px;
+}
+.audio{
+   display: none;
+}
+/* ----------------media-query------------------- */
+@media screen  and (max-width: 650px)
+{
+.hands img{
+    width: 150px;
+}
+}
